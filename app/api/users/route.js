@@ -2,7 +2,7 @@ import { createUserWithAccount, getUserByEmail } from "@/utils/user"; // Import 
 import bcrypt from 'bcryptjs'; // Import bcryptjs instead of bcrypt
 import { NextResponse } from "next/server";
 
-export const POST = async (req, _res) => {
+export const POST = async (req, res) => {
     try {
         const { name, email, password } = await req.json();
 
