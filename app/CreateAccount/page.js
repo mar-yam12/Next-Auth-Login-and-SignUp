@@ -1,5 +1,4 @@
 "use client"
-import axios from "axios";
 import { useState } from "react";
 import styles from './CreateAccount.module.css'; // Import CSS module
 import { useRouter } from "next/navigation";
@@ -14,11 +13,6 @@ export default function CreateAccount() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/api/users', {
-                name,
-                email,
-                password,
-            });
             router.push('/');
         } catch (error) {
             if (error.response && error.response.status === 400) {

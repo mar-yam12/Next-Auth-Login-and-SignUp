@@ -59,7 +59,7 @@ export default function Login() {
             Log In
           </button>
           <p className={styles.paragraph}>
-            Don't have an account?{" "}
+            Do not have an account?{" "}
             <Link href="/CreateAccount" className={styles.link}>
               Sign up
             </Link>

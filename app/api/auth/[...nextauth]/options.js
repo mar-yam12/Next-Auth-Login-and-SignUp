@@ -26,7 +26,7 @@ export const options = {
         },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials, _req) {
         const { email, password } = credentials;
         const user = await prisma.user.findUnique({
           where: {
